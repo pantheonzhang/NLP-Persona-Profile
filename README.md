@@ -1,4 +1,5 @@
 # NLP-Persona-Profile
+## 第一次会议  
 会议纪要：   
 1.分工和大致时间节点
 
@@ -15,3 +16,10 @@
 2.下次会议时间12-22日  
 
 3.项目git地址：https://github.com/pantheonzhang/NLP-Persona-Profile
+## 初步结果
+特征 | 模型 | 准确率 （age gender edu）
+---|---|---
+word2vec | LR | 只做了年龄 acc=0.4效果不好
+词袋模型 | TextRNN(单层LSTM) |年龄 acc=0.5
+词袋模型 | 双层双向LSTM |3轮训练 年龄的acc就可以达到0.5 
+word2vec | 双层双向LSTM |做了5轮 age edu gender 分别是0.59 0.81 0.53 Epoch增加可能还能提升一些
